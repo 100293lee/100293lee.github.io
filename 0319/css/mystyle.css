@@ -1,0 +1,23 @@
+@charset "utf-8";
+.title1 {
+    color: #BE1EC3;
+    text-align: center;
+    text-decoration: underline;
+    font-size: xx-large;
+}
+
+
+.maim1 {
+    color: #1DEFB1;
+    text-decoration: underline;
+    text-align: center;
+    font-size: x-large;
+}
+
+.main2 {
+}
+body img {
+    background-color: #5CF314;
+    -webkit-box-shadow: 42px -11px;
+    box-shadow: 42px -11px;
+}
