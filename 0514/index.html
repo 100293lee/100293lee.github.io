@@ -8,5 +8,84 @@
 </head>
 
 <body>
+<h1>互動視窗 (Modal)</h1>
+	<!-- 觸發互動視窗的按鈕 -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+  data-bs-target="#myModal">商品資訊</button>
+<!-- 互動視窗 -->
+<div class="modal fade" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">夢幻水晶香檳杯</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="cup.jpg" width="50%" class="img-fluid">
+        <p class="h3 text-end">$30.0</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">放入購物車</button>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+	
+<h2>工具提示 (Tooltips)</h2>
+<div class="container text-center">  
+  <img src="flowers3.jpg" width="70%" class="img-fluid"><br>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" 
+    data-bs-placement="top" title="太陽花在上方">在上方顯示工具提示</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+    data-bs-placement="bottom" title="太陽花在下方">在下方顯示工具提示</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+    data-bs-placement="left" title="太陽花在左方">在左方顯示工具提示</button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+    data-bs-placement="right" title="太陽花在右方">在右方顯示工具提示</button>	
+</div>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  });
+</script>
+<hr>
+	
+<h3>彈出提示 (Popovers)</h3>
+<div class="container text-center">
+  <img src="flowers3.jpg" width="50%" class="img-fluid"><br>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" 
+    data-bs-toggle="popover" data-bs-placement="top" data-bs-content="太陽花">
+    在上方顯示彈出提示</button>
+
+  <button type="button" class="btn btn-secondary" title="圖片標題" 
+    data-bs-toggle="popover" data-bs-placement="right" data-bs-content="太陽花">
+    在右側顯示彈出提示</button>
+</div>
+
+<script>
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  });
+</script>
+<hr>
+
+<h4>卡片 (Card)</h4>
+<div class="card text-center" style="width: 400px;">
+  <div class="card-header">詩句欣賞</div>
+  <div class="card-body">
+    <h5 class="card-title">陶淵明－飲酒其五</h5>
+    <p class="card-text">結廬在人境，而無車馬喧。問君何能爾，心遠地自偏。採菊東籬下，悠然見南山。山氣日夕佳，飛鳥相與還。此中有真意，欲辯已忘言。</p>
+    <a href="#" class="btn btn-primary">註釋與賞析</a>
+  </div>
+  <div class="card-footer text-muted">2021年</div>
+</div>
+<hr>
+	
+<h5>摺疊元件 (Collapse)</h5>
+
 </body>
 </html>
